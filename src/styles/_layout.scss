@@ -1,0 +1,32 @@
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+header {
+  display: flex;
+}
+
+.menu__ul {
+  display: flex;
+}
+
+.login ul {
+  display: flex;
+}
+
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  &__features {
+    display: flex;
+    grid-area: 2 / 1 / span 1 / span 1;
+  }
+  &__buttons {
+    display: flex;
+    .button-play {
+      display: flex;
+    }
+  }
+}

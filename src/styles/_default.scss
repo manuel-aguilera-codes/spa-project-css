@@ -1,0 +1,14 @@
+@use "_variables" as v;
+
+html {
+  position: relative;
+  font-family: v.$primary-font;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  padding-inline: 10px;
+}

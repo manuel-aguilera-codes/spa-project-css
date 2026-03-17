@@ -1,0 +1,18 @@
+@use "_variables" as v;
+
+@mixin reset_list() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin button() {
+  padding: 12px 35px;
+  background-color: v.$blue;
+  color: white;
+  border-radius: 28px;
+  &:hover {
+    background-color: white;
+    color: v.$grey;
+  }
+}

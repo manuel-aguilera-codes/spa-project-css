@@ -1,0 +1,211 @@
+@use "_layout" as *;
+@use "_variables" as v;
+@use "_mixins" as m;
+@use "_default" as *;
+
+body {
+  min-height: 100vh;
+  background-color: v.$pale-grey;
+  &::before {
+    content: "";
+    width: 35%;
+    height: 80vh;
+    background-color: v.$green;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -5;
+  }
+}
+
+header {
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0px;
+  .logo-container {
+    margin: 0;
+    .logo {
+      width: 150px;
+    }
+  }
+  .menu__ul {
+    align-items: center;
+    @include m.reset_list();
+    a {
+      text-decoration: none;
+      color: v.$blue;
+      &:hover {
+        color: v.$green;
+      }
+    }
+    .menu_btn {
+      margin-right: 40px;
+    }
+  }
+  .login ul {
+    align-items: center;
+    gap: 40px;
+    @include m.reset_list();
+    a {
+      text-decoration: none;
+      color: v.$blue;
+      &:hover {
+        color: white;
+      }
+    }
+    .btn {
+      color: white;
+      &:hover {
+        color: grey;
+      }
+    }
+    .a-icon:hover {
+      transform: scale(1.2);
+    }
+  }
+  img {
+    width: 25px;
+  }
+}
+
+.btn {
+  @include m.button();
+  color: white;
+}
+
+.hero {
+  padding-bottom: 50px;
+  &__text {
+    width: 89%;
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    font-size: 42px;
+    font-weight: 700;
+    color: v.$blue;
+    margin-top: 80px;
+  }
+
+  &__description {
+    color: v.$grey;
+  }
+
+  &__buttons {
+    align-items: center;
+    gap: 30px;
+    a {
+      text-decoration: none;
+    }
+    .button-play {
+      align-items: center;
+      gap: 15px;
+      color: v.$blue;
+      .icon-play-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 10px;
+        border-radius: 50%;
+        background-color: white;
+        box-shadow: 5px 5px 25px rgb(127, 127, 127, 0.5);
+        .icon-play {
+          width: 15px;
+        }
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+      &:hover {
+        color: v.$green;
+      }
+    }
+  }
+
+  &__features {
+    background-color: white;
+    border-radius: 15px;
+    justify-content: space-between;
+    width: 80%;
+    padding: 20px 0px;
+    margin-top: 50px;
+    .hero__feature {
+      text-align: center;
+      padding-inline: 30px;
+      &-icon {
+        width: 50px;
+      }
+      &-num {
+        font-size: 26px;
+        margin: 10px;
+      }
+      &-text {
+        color: v.$grey;
+        font-size: 14px;
+      }
+    }
+  }
+  &__quotes {
+    position: relative;
+  }
+
+  &__comillas {
+    width: 20px;
+    margin: 0;
+  }
+
+  &__quote {
+    font-size: 12px;
+    margin: 5px 0px 10px;
+  }
+
+  &__author {
+    font-size: 16px;
+    font-weight: bold;
+    color: v.$blue;
+    margin: 0;
+  }
+
+  &__quote1 {
+    position: absolute;
+    background-color: rgb(255, 255, 255, 0.5);
+    width: 42%;
+    top: 250px;
+    right: -60px;
+    padding: 15px;
+    border-radius: 15px;
+    z-index: -1;
+  }
+  &__quote2 {
+    position: absolute;
+    background-color: rgb(255, 255, 255, 0.5);
+    width: 42%;
+    top: 480px;
+    right: 0px;
+    padding: 15px;
+    border-radius: 15px;
+    z-index: -1;
+  }
+
+  .woman-container {
+    position: absolute;
+    bottom: -10px;
+    left: 160px;
+    width: 95%;
+    margin: 0;
+    z-index: -2;
+
+    .woman {
+      width: 100%;
+    }
+  }
+
+  .lotus {
+    position: absolute;
+    z-index: -3;
+    width: 400px;
+    top: -30px;
+    right: 20px;
+  }
+}
